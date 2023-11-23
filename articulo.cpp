@@ -1,30 +1,23 @@
 #include "articulo.h"
 
-bool Articulo::getJournal() const
-{
+bool Articulo::getJournal() const{
     return journal;
 }
 
-void Articulo::setJournal(bool newJournal)
-{
+void Articulo::setJournal(bool newJournal){
     journal = newJournal;
 }
 
-string Articulo::obtenerReferencia()
-{
+string Articulo::obtenerReferencia(){
     return Documento::obtenerReferencia() +
-            revista + ", " +
-            this->publicacion + ", En Journal: " +
+            revista + "" +
+            this->publicacion + ", Journal: " +
             (this->journal ? "Si" : "No");
 }
-
-Articulo::Articulo()
-{
+Articulo::Articulo(){
 
 }
-
 Articulo::Articulo(int numAutores, string publicacion, string revista):
-    Documento(numAutores), revista(revista)
-{
+    Documento(numAutores), revista(revista){
     this->publicacion = publicacion;
 }

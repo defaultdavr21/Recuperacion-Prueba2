@@ -1,22 +1,18 @@
 #ifndef BIBLIOGRAFIA_H
 #define BIBLIOGRAFIA_H
-
 #include "documento.h"
 #include "libro.h"
 #include "articulo.h"
 
-class Bibliografia : public Documento{
+class Bibliografia
+{
 private:
-    vector <Documento> referencias;
+    vector<Documento*> referencias;
 public:
     Bibliografia();
-    Bibliografia(const vector<Documento> &referenciass);
-    bool agregarlibro();
-    bool agregararticulo();
-    void imprimirreferencia();
-    const vector<Documento> &obtenerReferencia() const;
-
-
+    bool agregarLibro();
+    bool agregarArticulo();
+    void imprimirReferencias();
 };
 
 #endif // BIBLIOGRAFIA_H

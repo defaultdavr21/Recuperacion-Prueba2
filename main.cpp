@@ -5,28 +5,38 @@
 
 using namespace std;
 
-int main()
-{
-    cout << "= = PRUEBA 2 = =" << endl;
-    cout << "Autor: Rodrigo Tufiño" << endl;
+int main(){
 
-    Libro doc(2,"McGraw Hill", "C++ Programming: An Object-Oriented Approach");
-    doc.agregarAutor("Forouza B.");
-    doc.agregarAutor("Gilberg R.");
-    doc.setPaginas(960);
-    cout << doc.obtenerReferencia() << endl;
-    Bibliografia b;
-    b.agregarlibro();
-    b.obtenerReferencia();
+    int op;
+    Bibliografia bi;
 
-    /*Articulo art(5, "Intelligent Human Systems Integration 2021: Proceedings of the 4th International Conference on Intelligent Human Systems Integration (IHSI 2021)","Integrating People and Intelligent Systems");
-    art.agregarAutor("Sebastián Valladares");
-    art.agregarAutor("Mayerly Toscano");
-    art.agregarAutor("Rodrigo Tufiño");
-    art.agregarAutor("Paulina Morillo");
-    art.agregarAutor("Diego Vallejo-Huanga");
-    art.setJournal(false);
-    cout << art.obtenerReferencia() << endl;*/
+    do{
+        cout<<"\n--- Bienvenidos ---"<<endl;
+        cout<<"1.Ingresar un Libro"<<endl;
+        cout<<"2.ingresar un Articulo"<<endl;
+        cout<<"3.Imprimir Referencias"<<endl;
+        cout<<"4.Salir"<<endl;
+        cout<<"Ingrese una opcion: ";
+        cin>>op;
+        switch(op){
+        case 1:
+            bi.agregarLibro();
+            break;
+        case 2:
+            bi.agregarArticulo();
+            break;
+        case 3:
+            bi.imprimirReferencias();
+            break;
+        case 4:
+            cout<<"Gracias ";
+        default:
+            cout<<"Error...";
+            break;
+        }
+    }while(op!=4);
+
+
 
     return 0;
 }

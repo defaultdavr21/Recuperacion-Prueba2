@@ -18,9 +18,8 @@ public:
     Documento();
     Documento(int numAutores);
     bool agregarAutor(string nombre);
-    string obtenerReferencia();
+    virtual string obtenerReferencia();
     const vector<string> &getAutores() const;
-    int getautor();
 };
 
 #endif // DOCUMENTO_H

@@ -14,7 +14,6 @@ public:
 
     bool getJournal() const;
     void setJournal(bool newJournal);
-
     string obtenerReferencia();
 };
 
