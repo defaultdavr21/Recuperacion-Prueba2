@@ -5,6 +5,8 @@ const vector<string> &Documento::getAutores() const
     return autores;
 }
 
+
+
 Documento::Documento()
 {
 
@@ -13,6 +15,10 @@ Documento::Documento()
 Documento::Documento(int numAutores): numAutores(numAutores)
 {
 
+}
+int Documento::getautor(){
+
+    return numAutores;
 }
 
 bool Documento::agregarAutor(string nombre)

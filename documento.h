@@ -20,6 +20,7 @@ public:
     bool agregarAutor(string nombre);
     string obtenerReferencia();
     const vector<string> &getAutores() const;
+    int getautor();
 };
 
 #endif // DOCUMENTO_H
